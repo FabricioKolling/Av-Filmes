@@ -1,0 +1,19 @@
+CREATE TABLE filmes (
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    sinopse TEXT NOT NULL,
+    poster_url TEXT NOT NULL
+);
+
+CREATE TABLE avaliacoes (
+    id SERIAL PRIMARY KEY,
+    filme_id INTEGER REFERENCES filmes(id) ON DELETE CASCADE,
+    nota NUMERIC(2,1) CHECK (nota >= 0 AND nota <= 10),
+    comentario TEXT,
+    data_avaliacao TIMESTAMP DEFAULT NOW()
+);
+
+Como fazer funcionar:
+
+npm init -y
+npm install express pg cors

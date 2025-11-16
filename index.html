@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Crítico</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/Logo Av Filmes.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <img src="img/Logo Av Filmes.png" alt="Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="header">
+            <h1>Filmes para Avaliação</h1>
+        </header>
+
+        <section class="carousel-wrapper">
+            <button class="carousel-btn left hidden">❮</button>
+
+            <div class="carousel" id="carousel">
+                </div>
+
+            <button class="carousel-btn right">❯</button>
+        </section>
+    </main>
+    <div id="modalAvaliacao" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <h2 id="modalTitulo">Avaliar Filme</h2>
+
+            <div class="modal-body">
+
+                <h3>Críticas Anteriores</h3>
+                <div id="listaAvaliacoesAnteriores">
+                    </div>
+
+                <hr class="modal-divider">
+
+                <h3>Deixe sua crítica</h3>
+                
+                <label>Sua Nota:</label>
+                <div class="star-rating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+
+                <label>Seu Comentário:</label>
+                <textarea id="comentario" rows="4" placeholder="Escreva o que achou do filme..."></textarea>
+
+                <button id="btnEnviarAvaliacao" class="modal-btn">Enviar Avaliação</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © 2025 Cinema Crítico — Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
